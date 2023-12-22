@@ -19,7 +19,8 @@
     "format:elm": "elm-format --yes $(find src -type f -name '*.elm')",
     "format:ts": "prettier -w $(find src -type f -name '*.ts')",
     "format:html": "prettier -w $(find src -type f -name '*.html')",
-    "format:markdown": "prettier -w $(find . -type f -name '*.md')"
+    "format:markdown": "prettier -w $(find . -type f -name '*.md')",
+    "format:css": "prettier -w $(find scss -type f -name '*.scss')"
   },
   "keywords": [],
   "author": "",

@@ -50,7 +50,7 @@
       "persistent": true
     },
     "format": {
-      "dependsOn": ["format:elm", "format:ts", "format:html", "format:markdown"]
+      "dependsOn": ["format:elm", "format:ts", "format:html", "format:markdown", "format:css"]
     },
     "format:elm": {
       "inputs": ["src/**/*.elm"]
@@ -63,6 +63,9 @@
     },
     "format:markdown": {
       "inputs": ["**/*.md"]
+    },
+    "format:css": {
+      "inputs": ["scss/**/*.scss", "scss/*.scss"]
     }
   }
 }
