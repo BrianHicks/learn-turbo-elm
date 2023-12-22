@@ -27,7 +27,6 @@
       "env": ["ELM_TEST_SEED"]
     },
     "dev": {
-      "dependsOn": ["build:html"],
       "persistent": true
     },
     "dev:html": {
