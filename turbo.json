@@ -15,7 +15,8 @@
       "dependsOn": ["test:elm"]
     },
     "test:elm": {
-      "inputs": ["elm.json", "src/**/*.elm", "tests/**/*.elm"]
+      "inputs": ["elm.json", "src/**/*.elm", "tests/**/*.elm"],
+      "env": ["ELM_TEST_SEED"]
     }
   }
 }
