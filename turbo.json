@@ -10,6 +10,12 @@
     "build:elm": {
       "inputs": ["elm.json", "src/**/*.elm"],
       "outputs": ["dist/elm.js"]
+    },
+    "test": {
+      "dependsOn": ["test:elm"]
+    },
+    "test:elm": {
+      "inputs": ["elm.json", "src/**/*.elm", "tests/**/*.elm"]
     }
   }
 }
