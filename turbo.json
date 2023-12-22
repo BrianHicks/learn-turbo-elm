@@ -1,6 +1,9 @@
 {
   "$schema": "https://turbo.build/schema.json",
   "pipeline": {
+    "clean": {
+      "cache": false
+    },
     "build:elm": {
       "outputs": ["dist/elm.js"]
     },
