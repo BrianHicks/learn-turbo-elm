@@ -12,6 +12,7 @@
     "dev": "hivemind --no-prefix",
     "dev:elm": "elm-watch hot",
     "dev:html": "python3 -m http.server -d dist",
+    "dev:ts": "tsc --watch --preserveWatchOutput --outDir dist",
     "format:elm": "elm-format --yes $(find src -type f -name '*.elm')",
     "format:ts": "prettier -w $(find src -type f -name '*.ts')",
     "format:html": "prettier -w $(find src -type f -name '*.html')",

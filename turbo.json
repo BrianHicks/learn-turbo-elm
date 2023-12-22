@@ -36,6 +36,9 @@
     "dev:elm": {
       "persistent": true
     },
+    "dev:ts": {
+      "persistent": true
+    },
     "format": {
       "dependsOn": ["format:elm", "format:ts", "format:html", "format:markdown"]
     },
