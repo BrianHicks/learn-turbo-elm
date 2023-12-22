@@ -12,8 +12,8 @@
     "dev": "hivemind",
     "dev:elm": "elm-watch hot",
     "dev:html": "python3 -m http.server -d dist",
-    "lint:elm:format": "elm-format --yes $(find src -type f -name '*.elm')",
-    "lint:ts:format": "prettier -w $(find src -type f -name '*.ts')"
+    "format:elm": "elm-format --yes $(find src -type f -name '*.elm')",
+    "format:ts": "prettier -w $(find src -type f -name '*.ts')"
   },
   "keywords": [],
   "author": "",
