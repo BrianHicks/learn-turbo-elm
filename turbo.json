@@ -21,6 +21,9 @@
     "test:elm": {
       "inputs": ["elm.json", "src/**/*.elm", "tests/**/*.elm"],
       "env": ["ELM_TEST_SEED"]
+    },
+    "dev": {
+      "dependsOn": ["build:html"]
     }
   }
 }
