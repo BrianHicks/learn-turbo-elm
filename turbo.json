@@ -7,7 +7,6 @@
     "build:elm": {
       "inputs": ["elm.json", "src/**/*.elm"],
       "outputs": ["dist/elm.js"]
-    },
-    "type-check": {}
+    }
   }
 }
