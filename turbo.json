@@ -23,7 +23,15 @@
       "env": ["ELM_TEST_SEED"]
     },
     "dev": {
-      "dependsOn": ["build:html"]
+      "dependsOn": ["build:html"],
+      "persistent": true
+    },
+    "dev:html": {
+      "dependsOn": ["build:html"],
+      "persistent": true
+    },
+    "dev:elm": {
+      "persistent": true
     }
   }
 }
