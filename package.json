@@ -21,7 +21,7 @@
     "format:html": "prettier -w $(find src -type f -name '*.html')",
     "format:markdown": "prettier -w $(find . -type f -name '*.md')",
     "format:css": "prettier -w $(find scss -type f -name '*.scss')",
-    "package:elm": "mkdir -p dist && elm-watch make --optimize",
+    "package:elm": "mkdir -p dist && elm-optimize-level-2 src/Main.elm --output dist/elm.js",
     "package:js": "uglifyjs --compress --mangle --in-situ -- dist/index.js"
   },
   "keywords": [],
@@ -29,6 +29,7 @@
   "license": "ISC",
   "dependencies": {
     "browser-sync": "^2.29.3",
+    "elm-optimize-level-2": "^0.3.5",
     "elm-watch": "^1.1.2",
     "nodemon": "^3.0.2",
     "prettier": "^3.1.1",
