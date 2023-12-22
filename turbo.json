@@ -36,6 +36,15 @@
     },
     "dev:elm": {
       "persistent": true
+    },
+    "lint": {
+      "dependsOn": ["lint:elm:format", "lint:ts:format"]
+    },
+    "lint:elm:format": {
+      "inputs": ["src/**/*.elm"]
+    },
+    "lint:ts:format": {
+      "inputs": ["src/**/*.ts"]
     }
   }
 }
