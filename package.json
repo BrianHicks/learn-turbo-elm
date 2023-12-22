@@ -14,7 +14,8 @@
     "dev:html": "python3 -m http.server -d dist",
     "format:elm": "elm-format --yes $(find src -type f -name '*.elm')",
     "format:ts": "prettier -w $(find src -type f -name '*.ts')",
-    "format:html": "prettier -w $(find src -type f -name '*.html')"
+    "format:html": "prettier -w $(find src -type f -name '*.html')",
+    "format:markdown": "prettier -w $(find . -type f -name '*.md')"
   },
   "keywords": [],
   "author": "",

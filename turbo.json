@@ -38,7 +38,7 @@
       "persistent": true
     },
     "format": {
-      "dependsOn": ["format:elm", "format:ts", "format:html"]
+      "dependsOn": ["format:elm", "format:ts", "format:html", "format:markdown"]
     },
     "format:elm": {
       "inputs": ["src/**/*.elm"]
@@ -48,6 +48,9 @@
     },
     "format:html": {
       "inputs": ["src/**/*.html"]
+    },
+    "format:markdown": {
+      "inputs": ["**/*.md"]
     }
   }
 }
