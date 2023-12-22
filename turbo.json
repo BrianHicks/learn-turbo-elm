@@ -5,7 +5,7 @@
       "cache": false
     },
     "build": {
-      "dependsOn": ["build:elm", "build:html"]
+      "dependsOn": ["build:elm", "build:html", "build:js"]
     },
     "build:elm": {
       "inputs": ["elm.json", "src/**/*.elm"],
@@ -14,6 +14,10 @@
     "build:html": {
       "inputs": ["src/index.html"],
       "outputs": ["dist/index.html"]
+    },
+    "build:js": {
+      "inputs": ["tsconfig.json", "src/**/*.ts"],
+      "outputs": ["dist/index.js"]
     },
     "test": {
       "dependsOn": ["test:elm"]

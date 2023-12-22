@@ -8,9 +8,15 @@ dependencies:
   elm-watch:
     specifier: ^1.1.2
     version: 1.1.2
+  prettier:
+    specifier: ^3.1.1
+    version: 3.1.1
   turbo:
     specifier: ^1.11.2
     version: 1.11.2
+  typescript:
+    specifier: ^5.3.3
+    version: 5.3.3
 
 packages:
 
@@ -136,6 +142,12 @@ packages:
     engines: {node: '>=8.6'}
     dev: false
 
+  /prettier@3.1.1:
+    resolution: {integrity: sha512-22UbSzg8luF4UuZtzgiUOfcGM8s4tjBv6dJRT7j275NXsy2jb4aJa4NNveul5x4eqlF1wuhuR2RElK71RvmVaw==}
+    engines: {node: '>=14'}
+    hasBin: true
+    dev: false
+
   /readdirp@3.6.0:
     resolution: {integrity: sha512-hOS089on8RduqdbhvQ5Z37A0ESjsqz6qnRcffsMU3495FuTdqSm+7bhJ29JvIOsBDEEnan5DPu9t3To9VRlMzA==}
     engines: {node: '>=8.10.0'}
@@ -224,6 +236,12 @@ packages:
       turbo-linux-arm64: 1.11.2
       turbo-windows-64: 1.11.2
       turbo-windows-arm64: 1.11.2
+    dev: false
+
+  /typescript@5.3.3:
+    resolution: {integrity: sha512-pXWcraxM0uxAS+tN0AG/BF2TyqmHO014Z070UsJ+pFvYuRSq8KH8DmWpnbXe0pEPDHXZV3FcAbJkijJ5oNEnWw==}
+    engines: {node: '>=14.17'}
+    hasBin: true
     dev: false
 
   /which@2.0.2:
