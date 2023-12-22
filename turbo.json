@@ -8,7 +8,7 @@
       "dependsOn": ["build:elm", "build:html", "build:js"]
     },
     "build:elm": {
-      "inputs": ["elm.json", "src/**/*.elm"],
+      "inputs": ["elm.json", "src/*.elm", "src/**/*.elm"],
       "outputs": ["dist/elm.js"]
     },
     "build:html": {
@@ -16,18 +16,18 @@
       "outputs": ["dist/index.html"]
     },
     "build:js": {
-      "inputs": ["tsconfig.json", "src/**/*.ts"],
+      "inputs": ["tsconfig.json", "src/*.ts", "src/**/*.ts"],
       "outputs": ["dist/index.js"]
     },
     "build:css": {
-      "inputs": ["scss/**/*.scss", "scss/*.scss"],
+      "inputs": ["scss/*.scss", "scss/**/*.scss"],
       "outputs": ["dist/style.scss", "dist/style.scss.map"]
     },
     "test": {
       "dependsOn": ["test:elm"]
     },
     "test:elm": {
-      "inputs": ["elm.json", "src/**/*.elm", "tests/**/*.elm"],
+      "inputs": ["elm.json", "src/*.elm", "src/**/*.elm", "tests/*.elm", "tests/**/*.elm"],
       "env": ["ELM_TEST_SEED"]
     },
     "dev": {
@@ -53,19 +53,19 @@
       "dependsOn": ["format:elm", "format:ts", "format:html", "format:markdown", "format:css"]
     },
     "format:elm": {
-      "inputs": ["src/**/*.elm"]
+      "inputs": ["src/*.elm", "src/**/*.elm"]
     },
     "format:ts": {
-      "inputs": ["src/**/*.ts"]
+      "inputs": ["src/*.ts", "src/**/*.ts"]
     },
     "format:html": {
-      "inputs": ["src/**/*.html"]
+      "inputs": ["src/*.html", "src/**/*.html"]
     },
     "format:markdown": {
-      "inputs": ["**/*.md"]
+      "inputs": ["*.md", "**/*.md"]
     },
     "format:css": {
-      "inputs": ["scss/**/*.scss", "scss/*.scss"]
+      "inputs": ["scss/*.scss", "scss/**/*.scss"]
     }
   }
 }
