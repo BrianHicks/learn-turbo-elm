@@ -21,7 +21,7 @@
     "format:html": "prettier -w $(find src -type f -name '*.html')",
     "format:markdown": "prettier -w $(find . -type f -name '*.md')",
     "format:css": "prettier -w $(find scss -type f -name '*.scss')",
-    "package:elm": "mkdir -p dist && elm-optimize-level-2 src/Main.elm --output dist/elm.js",
+    "package:elm": "mkdir -p dist && elm-optimize-level-2 src/Main.elm --output dist/elm.js && terser dist/elm.js --compress 'pure_funcs=\"F2,F3,F4,F5,F6,F7,F8,F9,A2,A3,A4,A5,A6,A7,A8,A9\",pure_getters,keep_fargs=false,unsafe_comps,unsafe' | terser --mangle --output=dist/elm.min.js && mv dist/elm.min.js dist/elm.js",
     "package:js": "terser --compress --mangle -- dist/index.js > dist/index.js.min && mv dist/index.js.min dist/index.js"
   },
   "keywords": [],
