@@ -23,6 +23,7 @@
 
             # Dev
             pkgs.hivemind
+            pkgs.python3
           ];
         };
       }

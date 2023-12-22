@@ -6,8 +6,10 @@
   "scripts": {
     "clean": "rm -rf dist",
     "build:elm": "mkdir -p dist && elm-watch make",
+    "build:html": "mkdir -p dist && cp src/index.html dist/index.html",
     "test:elm": "elm-test --seed ${ELM_TEST_SEED:-1234567890}",
-    "dev:elm": "elm-watch hot"
+    "dev:elm": "elm-watch hot",
+    "dev:html": "python3 -m http.server -d dist"
   },
   "keywords": [],
   "author": "",

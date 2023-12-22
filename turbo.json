@@ -5,11 +5,15 @@
       "cache": false
     },
     "build": {
-      "dependsOn": ["build:elm"]
+      "dependsOn": ["build:elm", "build:html"]
     },
     "build:elm": {
       "inputs": ["elm.json", "src/**/*.elm"],
       "outputs": ["dist/elm.js"]
+    },
+    "build:html": {
+      "inputs": ["src/index.html"],
+      "outputs": ["dist/index.html"]
     },
     "test": {
       "dependsOn": ["test:elm"]
