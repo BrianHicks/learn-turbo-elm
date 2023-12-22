@@ -4,6 +4,9 @@
     "clean": {
       "cache": false
     },
+    "build": {
+      "dependsOn": ["build:elm"]
+    },
     "build:elm": {
       "inputs": ["elm.json", "src/**/*.elm"],
       "outputs": ["dist/elm.js"]
