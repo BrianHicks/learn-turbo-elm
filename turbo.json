@@ -38,13 +38,16 @@
       "persistent": true
     },
     "format": {
-      "dependsOn": ["format:elm", "format:ts"]
+      "dependsOn": ["format:elm", "format:ts", "format:html"]
     },
     "format:elm": {
       "inputs": ["src/**/*.elm"]
     },
     "format:ts": {
       "inputs": ["src/**/*.ts"]
+    },
+    "format:html": {
+      "inputs": ["src/**/*.html"]
     }
   }
 }

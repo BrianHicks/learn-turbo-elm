@@ -13,7 +13,8 @@
     "dev:elm": "elm-watch hot",
     "dev:html": "python3 -m http.server -d dist",
     "format:elm": "elm-format --yes $(find src -type f -name '*.elm')",
-    "format:ts": "prettier -w $(find src -type f -name '*.ts')"
+    "format:ts": "prettier -w $(find src -type f -name '*.ts')",
+    "format:html": "prettier -w $(find src -type f -name '*.html')"
   },
   "keywords": [],
   "author": "",
