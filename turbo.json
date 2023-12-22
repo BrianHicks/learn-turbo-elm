@@ -8,18 +8,22 @@
       "dependsOn": ["build:elm", "build:html", "build:js"]
     },
     "build:elm": {
+      "dependsOn": ["dist:prepare"],
       "inputs": ["elm.json", "src/*.elm", "src/**/*.elm"],
       "outputs": ["dist/elm.js"]
     },
     "build:html": {
+      "dependsOn": ["dist:prepare"],
       "inputs": ["src/index.html"],
       "outputs": ["dist/index.html"]
     },
     "build:js": {
+      "dependsOn": ["dist:prepare"],
       "inputs": ["tsconfig.json", "src/*.ts", "src/**/*.ts"],
       "outputs": ["dist/index.js"]
     },
     "build:css": {
+      "dependsOn": ["dist:prepare"],
       "inputs": ["scss/*.scss", "scss/**/*.scss"],
       "outputs": ["dist/style.scss", "dist/style.scss.map"]
     },
@@ -71,6 +75,7 @@
       "dependsOn": ["package:elm", "package:js", "package:css", "package:html"]
     },
     "package:elm": {
+      "dependsOn": ["dist:prepare"],
       "inputs": ["elm.json", "src/*.elm", "src/**/*.elm"],
       "outputs": ["dist/elm.js"]
     },
