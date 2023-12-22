@@ -1,0 +1,9 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "pipeline": {
+    "build:elm": {
+      "outputs": ["dist/elm.js"]
+    },
+    "type-check": {}
+  }
+}
