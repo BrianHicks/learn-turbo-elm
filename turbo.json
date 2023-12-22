@@ -39,6 +39,9 @@
     "dev:ts": {
       "persistent": true
     },
+    "dev:browsersync": {
+      "persistent": true
+    },
     "format": {
       "dependsOn": ["format:elm", "format:ts", "format:html", "format:markdown"]
     },

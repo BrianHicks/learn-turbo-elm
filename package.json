@@ -11,8 +11,9 @@
     "test:elm": "elm-test --seed ${ELM_TEST_SEED:-1234567890}",
     "dev": "hivemind --no-prefix",
     "dev:elm": "elm-watch hot",
-    "dev:html": "python3 -m http.server -d dist",
+    "dev:html": "nodemon --watch src --ext html --exec 'cp src/index.html dist/index.html'",
     "dev:ts": "tsc --watch --preserveWatchOutput --outDir dist",
+    "dev:browsersync": "browser-sync start --no-open --server dist --watch dist --ignore dist/elm.js",
     "format:elm": "elm-format --yes $(find src -type f -name '*.elm')",
     "format:ts": "prettier -w $(find src -type f -name '*.ts')",
     "format:html": "prettier -w $(find src -type f -name '*.html')",
@@ -22,7 +23,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "browser-sync": "^2.29.3",
     "elm-watch": "^1.1.2",
+    "nodemon": "^3.0.2",
     "prettier": "^3.1.1",
     "turbo": "^1.11.2",
     "typescript": "^5.3.3"
