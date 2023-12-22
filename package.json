@@ -5,13 +5,15 @@
   "main": "index.js",
   "scripts": {
     "clean": "rm -rf dist",
-    "build:elm": "mkdir -p dist && elm make src/Main.elm --output dist/elm.js",
-    "test:elm": "elm-test --seed ${ELM_TEST_SEED:-1234567890}"
+    "build:elm": "mkdir -p dist && elm-watch make",
+    "test:elm": "elm-test --seed ${ELM_TEST_SEED:-1234567890}",
+    "dev:elm": "elm-watch hot"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "elm-watch": "^1.1.2",
     "turbo": "^1.11.2"
   }
 }

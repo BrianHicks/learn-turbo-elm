@@ -20,6 +20,9 @@
             # Node
             pkgs.nodejs
             pkgs.nodePackages.pnpm
+
+            # Dev
+            pkgs.hivemind
           ];
         };
       }
