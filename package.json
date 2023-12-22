@@ -20,7 +20,9 @@
     "format:ts": "prettier -w $(find src -type f -name '*.ts')",
     "format:html": "prettier -w $(find src -type f -name '*.html')",
     "format:markdown": "prettier -w $(find . -type f -name '*.md')",
-    "format:css": "prettier -w $(find scss -type f -name '*.scss')"
+    "format:css": "prettier -w $(find scss -type f -name '*.scss')",
+    "package:elm": "mkdir -p dist && elm-watch make --optimize",
+    "package:js": "uglifyjs --compress --mangle --in-situ -- dist/index.js"
   },
   "keywords": [],
   "author": "",
@@ -32,6 +34,7 @@
     "prettier": "^3.1.1",
     "sass": "^1.69.5",
     "turbo": "^1.11.2",
-    "typescript": "^5.3.3"
+    "typescript": "^5.3.3",
+    "uglify-js": "^3.17.4"
   }
 }

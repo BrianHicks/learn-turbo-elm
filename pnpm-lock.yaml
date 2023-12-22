@@ -26,6 +26,9 @@ dependencies:
   typescript:
     specifier: ^5.3.3
     version: 5.3.3
+  uglify-js:
+    specifier: ^3.17.4
+    version: 3.17.4
 
 packages:
 
@@ -1160,6 +1163,12 @@ packages:
 
   /ua-parser-js@1.0.37:
     resolution: {integrity: sha512-bhTyI94tZofjo+Dn8SN6Zv8nBDvyXTymAdM3LDI/0IboIUwTu1rEhW7v2TfiVsoYWgkQ4kOVqnI8APUFbIQIFQ==}
+    dev: false
+
+  /uglify-js@3.17.4:
+    resolution: {integrity: sha512-T9q82TJI9e/C1TAxYvfb16xO120tMVFZrGA3f9/P4424DNu6ypK103y0GPFVa17yotwSyZW5iYXgjYHkGrJW/g==}
+    engines: {node: '>=0.8.0'}
+    hasBin: true
     dev: false
 
   /undefsafe@2.0.5:

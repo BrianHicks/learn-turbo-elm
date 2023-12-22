@@ -66,6 +66,24 @@
     },
     "format:css": {
       "inputs": ["scss/*.scss", "scss/**/*.scss"]
+    },
+    "package": {
+      "dependsOn": ["package:elm", "package:js", "package:css", "package:html"]
+    },
+    "package:elm": {
+      "inputs": ["elm.json", "src/*.elm", "src/**/*.elm"],
+      "outputs": ["dist/elm.js"]
+    },
+    "package:js": {
+      "dependsOn": ["build:js"],
+      "inputs": ["dist/index.js"],
+      "outputs": ["dist/index.js"]
+    },
+    "package:html": {
+      "dependsOn": ["build:html"]
+    },
+    "package:css": {
+      "dependsOn": ["build:css"]
     }
   }
 }
