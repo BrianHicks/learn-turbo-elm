@@ -9,7 +9,7 @@
     "build:html": "mkdir -p dist && cp src/index.html dist/index.html",
     "build:js": "mkdir -p dist && tsc --outDir dist",
     "test:elm": "elm-test --seed ${ELM_TEST_SEED:-1234567890}",
-    "dev": "hivemind",
+    "dev": "hivemind --no-prefix",
     "dev:elm": "elm-watch hot",
     "dev:html": "python3 -m http.server -d dist",
     "format:elm": "elm-format --yes $(find src -type f -name '*.elm')",
