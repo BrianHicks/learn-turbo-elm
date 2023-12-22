@@ -19,6 +19,10 @@
       "inputs": ["tsconfig.json", "src/**/*.ts"],
       "outputs": ["dist/index.js"]
     },
+    "build:css": {
+      "inputs": ["scss/**/*.scss", "scss/*.scss"],
+      "outputs": ["dist/style.scss", "dist/style.scss.map"]
+    },
     "test": {
       "dependsOn": ["test:elm"]
     },
@@ -37,6 +41,9 @@
       "persistent": true
     },
     "dev:ts": {
+      "persistent": true
+    },
+    "dev:css": {
       "persistent": true
     },
     "dev:browsersync": {

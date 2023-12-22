@@ -8,11 +8,13 @@
     "build:elm": "mkdir -p dist && elm-watch make",
     "build:html": "mkdir -p dist && cp src/index.html dist/index.html",
     "build:js": "mkdir -p dist && tsc --outDir dist",
+    "build:css": "mkdir -p dist && sass scss/:dist/",
     "test:elm": "elm-test --seed ${ELM_TEST_SEED:-1234567890}",
     "dev": "hivemind --no-prefix",
     "dev:elm": "elm-watch hot",
-    "dev:html": "nodemon --watch src --ext html --exec 'cp src/index.html dist/index.html'",
+    "dev:html": "nodemon --watch src --ext html --exec 'turbo build:js'",
     "dev:ts": "tsc --watch --preserveWatchOutput --outDir dist",
+    "dev:css": "nodemon --watch scss --ext scss --exec 'turbo build:css'",
     "dev:browsersync": "browser-sync start --no-open --server dist --watch dist --ignore dist/elm.js",
     "format:elm": "elm-format --yes $(find src -type f -name '*.elm')",
     "format:ts": "prettier -w $(find src -type f -name '*.ts')",
@@ -27,6 +29,7 @@
     "elm-watch": "^1.1.2",
     "nodemon": "^3.0.2",
     "prettier": "^3.1.1",
+    "sass": "^1.69.5",
     "turbo": "^1.11.2",
     "typescript": "^5.3.3"
   }
