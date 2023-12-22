@@ -85,10 +85,14 @@
       "outputs": ["dist/index.js"]
     },
     "package:html": {
-      "dependsOn": ["build:html"]
+      "dependsOn": ["build:html"],
+      "inputs": ["dist/index.html"],
+      "outputs": ["dist/index.html"]
     },
     "package:css": {
-      "dependsOn": ["build:css"]
+      "dependsOn": ["build:css"],
+      "inputs": ["dist/style.css"],
+      "outputs": ["dist/style.css"]
     }
   }
 }
